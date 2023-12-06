@@ -1,0 +1,31 @@
+id: adsb_alt_framer_alt_framer
+label: Кадровый синхронизатор АЗС-В
+category: '[adsb_alt_framer]'
+
+templates:
+  imports: from gnuradio import adsb_alt_framer
+  make: adsb_alt_framer.alt_framer(${fs}, ${threshold})
+
+parameters:
+- id: fs
+  label: Sample Rate
+  dtype: float
+  default: 2e6
+- id: threshold
+  label: Detection Threshold
+  dtype: float
+  default: 0.01
+
+inputs:
+- label: in
+  domain: stream
+  dtype: float
+  vlen: 1
+
+outputs:
+- label: out
+  domain: stream
+  dtype: float
+  vlen: 1
+
+file_format: 1
