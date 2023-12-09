@@ -37,6 +37,8 @@ namespace gr {
 
       std::deque<int> in0_rise_edge_idxs, in0_fall_edge_idxs;
 
+      std::deque<size_t> pulse_idxs;
+
      public:
       alt_framer_impl(float fs, float threshold);
       ~alt_framer_impl();

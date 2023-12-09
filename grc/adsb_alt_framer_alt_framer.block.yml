@@ -8,11 +8,11 @@ templates:
 
 parameters:
 - id: fs
-  label: Sample Rate
+  label: Частота дискретизации
   dtype: float
   default: 2e6
 - id: threshold
-  label: Detection Threshold
+  label: Порог детектирования
   dtype: float
   default: 0.01
 
